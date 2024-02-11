@@ -1,4 +1,4 @@
-Los siguientes proyectos fueron desarrollados en [https://pythonhosted.org/](https://pythonhosted.org/scikit-fuzzy/auto_examples/index.html); y destacan la importancia de la logica difusa en los sistemas de control, empezando por lo mas sencillo el numero de reglas y modo de inferencia difusa hasta el desarrollo de un controlador con n puntos en un intervalo 
+Los siguientes proyectos fueron desarrollados en (https://pythonhosted.org/scikit-fuzzy/auto_examples/index.html); y destacan la importancia de la logica difusa en los sistemas de control, empezando por lo mas sencillo el numero de reglas y modo de inferencia difusa hasta el desarrollo de un controlador con n puntos en un intervalo 
 
 Los proyectos 1 "Sistemas de control difuso problema de la propina" fue desarrollado en la siguiente plataforma
               2 "proyecto 2 "Problema de la propina complejo" 
