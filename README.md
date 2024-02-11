@@ -48,4 +48,27 @@ Recommendation: See the documentation Project 2.pdf
 
 ********************************************************************************************************************************************************************************************
 
+El proyecto 3 "Defuzzificación" fue desarrollado en la siguiente plataforma
+
+-Spyder v 3.3.3 (Linux 32 bits)
+- scikit-fuzzy 0.4.2 (comando pip install scikit-fuzzy)
+- NumPy (comando pip install numpy)
+- Matplotlib (comando python -m pip install -U pip && python -m pip install -U matplotlib)
+- guia rapida instalación pip https://pip.pypa.io/en/stable/installation/
+
+Recomendación: Vea la documentación Proyecto 3.pdf
+
+English
+
+Project 3 "Defuzzification" was developed on the following platform
+
+-Spyder v 3.3.3 (Linux 32 bit)
+- scikit-fuzzy 0.4.2 (pip install scikit-fuzzy command)
+- NumPy (pip install numpy command)
+- Matplotlib (command python -m pip install -U pip && python -m pip install -U matplotlib)
+- quick pip installation guide https://pip.pypa.io/en/stable/installation/
+
+Recommendation: See the documentation Project 3.pdf
+
+
 
