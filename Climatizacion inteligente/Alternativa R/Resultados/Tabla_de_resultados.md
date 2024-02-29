@@ -14,6 +14,19 @@ capas y nodos; luego tenga en cuenta que los valores de peso son de caracter ale
 
 | No. de Capas | No. de Nodos | Temperatura a predecir °C | Temperatura predicha °C |
 | --- | --- | --- | --- | 
-| Nombre 1 | Cantidad 1 | Género 1 | Lugar 1 |
-| Nombre 2 | Cantidad 2 | Género 2 | Lugar 2 |
-
+| 2 capas | 2 Nodos | 26 | 40.18 |
+| 2 capas | 2 Nodos | 26 | 40.06 |
+| 2 capas | 3 Nodos | 26 | 39.54 |
+| 2 capas | 3 Nodos | 26 | 39.11 |
+| 2 capas | 4 Nodos | 26 | 39.96 |
+| 2 capas | 4 Nodos | 26 | 40.34 |
+| 2 capas | 5 Nodos | 26 | 40.39 |
+| 2 capas | 5 Nodos | 26 | 39.66 |
+| 3 capas | 2 Nodos | 26 | 39.71 |
+| 3 capas | 2 Nodos | 26 | 39.86 |
+| 3 capas | 3 Nodos | 26 | 40.71 |
+| 3 capas | 3 Nodos | 26 | 39.28 |
+| 3 capas | 4 Nodos | 26 | 40.75 |
+| 3 capas | 4 Nodos | 26 | 39.78 |
+| 3 capas | 5 Nodos | 26 | 40.40 |
+| 3 capas | 5 Nodos | 26 | 40.40 |
