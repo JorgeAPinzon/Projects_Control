@@ -1,0 +1,485 @@
+Formato del modelo Rcommander 
+
+# weights: Son los pesos de la red, es decir es un numero que representa las conexiones entre un nodo y otro, asi si el numero es positivo estimulara a otro y negativo suprime a otro 
+initial  value: Valor inicial de la funcion perdida llamada funcion costo o de error mide la discrepancia entre la predicción de un algoritmo de aprendizaje automatico y la salida supervisada y representa el costo de equivocarse  
+iter  10 value: Iteración despues de 10 pasos
+iter  10 value
+iter  10 value 
+final  value es el valor final es decir es cuando los pesos de la red no presentan un cambio significativo 
+converged : Nivel aceptable de rendimiento 
+
+
+Salida 1,1 modelo de 2 capas ocultas con dos nodos de primera entrada y dos nodos de salida (2,2) entrada no normalizada 26°C
+  
+# weights:  10
+initial  value 5020.725168 
+iter  10 value 4816.000054
+iter  10 value 4816.000027
+iter  10 value 4816.000027
+final  value 4816.000027 
+converged
+
+
+> prediccion <- predict(modelo, nueva_entrada)
+
+> print(prediccion)
+  [,1]        [,2]
+1    1 0.002128608      
+
+Salida 1,2 modelo de 2 nodos de primera entrada y los dos nodos de salida (2,2) entrada no normalizada 26°C 
+
+# weights:  10
+initial  value 4935.852548 
+iter  10 value 4816.000809
+final  value 4816.000025 
+converged
+
+> print(prediccion)
+  [,1]        [,2]
+1    1 0.002034945        
+
+Salida 2,1 modelo de 2 capas ocultas y  3 nodos de primera entrada los 3 nodos de salida (3,3) entrada no normalizada 26°C
+
+# weights:  18
+initial  value 4877.724088 
+iter  10 value 4816.000817
+final  value 4816.000032 
+converged
+
+> print(prediccion)
+  [,1]        [,2]          [,3]
+1    1 0.002308843 0.00004832692   
+
+Salida 2,2 modelo de 2 capas ocultas y  3 nodos de primera entrada los 3 nodos de salida (3,3) entrada no normalizada 26°C
+
+# weights:  18
+initial  value 4989.739937 
+final  value 4816.000032 
+converged
+
+> print(prediccion)
+  [,1]       [,2]         [,3]
+1    1 0.00216036 0.0007716915      
+
+Salida 2,3 modelo de 2 capas ocultas y  4 nodos de primera entrada los 4 nodos de salida (4,4) entrada no normalizada 26°C
+
+# weights:  28
+initial  value 4959.261428 
+final  value 4816.000160 
+converged
+
+> print(prediccion)
+  [,1]        [,2]        [,3]        [,4]
+1    1 0.002709137 0.003997163 0.001844073  
+
+Salida 2,4 modelo de 2 capas ocultas y  4 nodos de primera entrada los 4 nodos de salida (4,4) entrada no normalizada 26°C
+
+# weights:  28
+initial  value 4980.118493 
+final  value 4816.000157 
+converged
+
+> print(prediccion)
+  [,1]        [,2]        [,3]        [,4]
+1    1 0.002177082 0.004073116 0.002213452  
+
+Salida 2,5 modelo de 2 capas ocultas y  5 nodos de primera entrada los 5 nodos de salida (5,5) entrada no normalizada 26°C
+
+# weights:  40
+initial  value 4903.006406 
+final  value 4816.000148 
+converged
+
+> print(prediccion)
+  [,1]        [,2]         [,3]        [,4]         [,5]
+1    1 0.002449431 0.0007631229 0.004346909 0.0003883421  
+
+Salida 2,6 modelo de 2 capas ocultas y  5 nodos de primera entrada los 5 nodos de salida (5,5) entrada no normalizada 26°C
+
+# weights:  40
+initial  value 4879.908198 
+iter  10 value 4816.000645
+final  value 4816.000126 
+converged
+
+> print(prediccion)
+  [,1]        [,2]        [,3]        [,4]           [,5]
+1    1 0.003604942 0.001560568 0.002364037 0.000001197507 
+
+
+Ahora notese que estos valores no son escalables en los terminos de entrada-salida (°C) por que en una red neuronal es una práctica común la normalización, que escala los datos a un rango de 0 a 1, o la estandarización, que escala los datos para tener una media de 0 y una desviación estándar de 1.; luego para nuestro caso bastaria con escalar nuestros valores de entrada y salida asi tambien se realiza una mejora en terminos de calculo y precisión   
+
+Salida 1,1 modelo de 2 capas ocultas con dos nodos de primera entrada y dos nodos de salida (2,2) entrada normalizada .26°C
+
+# weights:  10
+initial  value 0.423345 
+iter  10 value 0.033754
+iter  20 value 0.033323
+iter  30 value 0.033167
+iter  40 value 0.033071
+iter  50 value 0.032024
+iter  60 value 0.025218
+iter  70 value 0.016405
+iter  80 value 0.006867
+iter  90 value 0.001241
+iter 100 value 0.000521
+final  value 0.000521 
+stopped after 100 iterations
+
+reescalando : 
+
+      [,1]          [,2]
+1 40.18247 0.00003314835
+
+Salida 1,2 modelo de 2 capas ocultas con dos nodos de primera entrada y dos nodos de salida (2,2) entrada no normalizada .26°C
+
+# weights:  10
+initial  value 2.117034 
+iter  10 value 0.033497
+iter  20 value 0.033224
+iter  30 value 0.033011
+iter  40 value 0.006212
+iter  50 value 0.000603
+iter  60 value 0.000600
+iter  70 value 0.000573
+iter  80 value 0.000570
+iter  90 value 0.000565
+iter 100 value 0.000564
+final  value 0.000564 
+stopped after 100 iterations
+
+reescalando : 
+
+[,1]        [,2]
+1 40.06413 0.002568724
+
+Salida 2,1 modelo de 2 capas ocultas y  3 nodos de primera entrada los 3 nodos de salida (3,3) entrada normalizada .26°C
+
+# weights:  18
+initial  value 6.698625 
+iter  10 value 0.033976
+iter  20 value 0.033171
+iter  30 value 0.032962
+iter  40 value 0.030731
+iter  50 value 0.022499
+iter  60 value 0.018402
+iter  70 value 0.000816
+iter  80 value 0.000794
+iter  90 value 0.000781
+iter 100 value 0.000712
+final  value 0.000712 
+stopped after 100 iterations
+
+reescalando : 
+
+  [,1]         [,2]        [,3]
+1  39.54625    0          0.002817605
+
+Salida 2,2 modelo de 2 capas ocultas y  3 nodos de primera entrada los 3 nodos de salida (3,3) entrada normalizada .26°C
+
+# weights:  18
+initial  value 3.155179 
+iter  10 value 0.033807
+iter  20 value 0.033265
+iter  30 value 0.032946
+iter  40 value 0.032265
+iter  50 value 0.030830
+iter  60 value 0.026286
+iter  70 value 0.013647
+iter  80 value 0.001546
+iter  90 value 0.001152
+iter 100 value 0.001135
+final  value 0.001135 
+stopped after 100 iterations
+
+reescalando : 
+
+     [,1]         [,2]          [,3]
+1 39.1129   0.002215149   0.01518927
+
+Salida 2,3 modelo de 2 capas ocultas y  4 nodos de primera entrada los 4 nodos de salida (4,4) entrada normalizada .26°C
+
+# weights:  28
+initial  value 4.016494 
+iter  10 value 0.035035
+iter  20 value 0.033360
+iter  30 value 0.033294
+iter  40 value 0.033162
+iter  50 value 0.032600
+iter  60 value 0.031612
+iter  70 value 0.024155
+iter  80 value 0.016466
+iter  90 value 0.009163
+iter 100 value 0.000549
+final  value 0.000549 
+stopped after 100 iterations
+
+reescalando : 
+
+      [,1]   [,2] [,3] [,4]
+1 39.9655     0    0    0
+
+Salida 2,4 modelo de 2 capas ocultas y  4 nodos de primera entrada los 4 nodos de salida (4,4) entrada normalizada .26°C
+
+# weights:  28
+initial  value 5.452220 
+iter  10 value 0.033812
+iter  20 value 0.032961
+iter  30 value 0.032857
+iter  40 value 0.030309
+iter  50 value 0.022165
+iter  60 value 0.013444
+iter  70 value 0.000509
+iter  80 value 0.000509
+iter  90 value 0.000508
+iter 100 value 0.000508
+final  value 0.000508 
+stopped after 100 iterations
+
+reescalando:
+
+      [,1] [,2] [,3] [,4]
+1 40.3453    0    0    0
+
+Salida 2,5 modelo de 2 capas ocultas y  5 nodos de primera entrada los 5 nodos de salida (5,5) entrada normalizada .26°C
+
+# weights:  40
+initial  value 6.578520 
+iter  10 value 0.034176
+iter  20 value 0.033194
+iter  30 value 0.032536
+iter  40 value 0.029595
+iter  50 value 0.016136
+iter  60 value 0.009573
+iter  70 value 0.004217
+iter  80 value 0.000543
+iter  90 value 0.000538
+iter 100 value 0.000531
+final  value 0.000531 
+stopped after 100 iterations
+
+reescalando:
+
+      [,1]       [,2]        [,3]       [,4]       [,5]
+1 40.39649 0.05449281 0.001163721 0.06012823 0.05810701
+
+Salida 2,5 modelo de 2 capas ocultas y  5 nodos de primera entrada los 5 nodos de salida (5,5) entrada normalizada .26°C
+
+# weights:  40
+initial  value 5.468105 
+iter  10 value 0.036731
+iter  20 value 0.033169
+iter  30 value 0.032486
+iter  40 value 0.002114
+iter  50 value 0.001401
+iter  60 value 0.001386
+iter  70 value 0.001308
+iter  80 value 0.001110
+iter  90 value 0.000838
+iter 100 value 0.000766
+final  value 0.000766 
+stopped after 100 iterations
+
+reescalando:
+
+      [,1]   [,2] [,3] [,4] [,5]
+1 39.66819     0    0    0    0
+
+Salida 3,1 modelo de 3 capas ocultas y  2 nodos de primera entrada los 2 nodos de salida (2,2,2) entrada normalizada .26°C
+
+# weights:  10
+initial  value 3.083222 
+iter  10 value 0.033162
+iter  20 value 0.032906
+iter  30 value 0.032494
+iter  40 value 0.009287
+iter  50 value 0.001454
+iter  60 value 0.000714
+iter  70 value 0.000700
+iter  80 value 0.000684
+iter  90 value 0.000617
+iter 100 value 0.000595
+final  value 0.000595 
+stopped after 100 iterations
+
+reescalando:
+
+[,1]       [,2]
+1 39.71122 0.02880147
+
+Salida 3,2 modelo de 3 capas ocultas y  2 nodos de primera entrada los 2 nodos de salida (2,2,2) entrada normalizada .26°C
+
+# weights:  10
+initial  value 2.763246 
+iter  10 value 0.033700
+iter  20 value 0.033257
+iter  30 value 0.032661
+iter  40 value 0.024657
+iter  50 value 0.000915
+iter  60 value 0.000794
+iter  70 value 0.000775
+iter  80 value 0.000695
+iter  90 value 0.000642
+iter 100 value 0.000594
+final  value 0.000594 
+stopped after 100 iterations
+
+reescalando:
+
+         [,1]  [,2]
+1    39.86023    0
+
+Salida 3,3 modelo de 3 capas ocultas y  3 nodos de primera entrada los 3 nodos de salida (3,3,3) entrada normalizada .26°C
+
+# weights:  18
+initial  value 5.980964 
+iter  10 value 0.033918
+iter  20 value 0.033266
+iter  30 value 0.033211
+iter  40 value 0.032965
+iter  50 value 0.017470
+iter  60 value 0.004894
+iter  70 value 0.000595
+iter  80 value 0.000590
+iter  90 value 0.000588
+iter 100 value 0.000566
+final  value 0.000566 
+stopped after 100 iterations
+
+reescalando: 
+
+      [,1]          [,2]           [,3]
+1 40.71859   0.002700744  0.00003986783
+
+
+Salida 3,4 modelo de 3 capas ocultas y  3 nodos de primera entrada los 3 nodos de salida (3,3,3) entrada normalizada .26°C
+
+
+# weights:  18
+initial  value 4.777586 
+iter  10 value 0.033831
+iter  20 value 0.033170
+iter  30 value 0.033149
+iter  40 value 0.032541
+iter  50 value 0.032065
+iter  60 value 0.025190
+iter  70 value 0.021424
+iter  80 value 0.001441
+iter  90 value 0.001164
+iter 100 value 0.001139
+final  value 0.001139 
+stopped after 100 iterations
+
+reescalando:
+
+       [,1]   [,2]   [,3]
+1 39.28726      0     0
+
+Salida 3,5 modelo de 3 capas ocultas y  4 nodos de primera entrada los 4 nodos de salida (4,4,4) entrada normalizada .26°C
+
+# weights:  28
+initial  value 4.072408 
+iter  10 value 0.035244
+iter  20 value 0.033129
+iter  30 value 0.033098
+iter  40 value 0.033078
+iter  50 value 0.020955
+iter  60 value 0.006624
+iter  70 value 0.000561
+iter  80 value 0.000554
+iter  90 value 0.000554
+iter 100 value 0.000537
+final  value 0.000537 
+stopped after 100 iterations
+
+reescalando: 
+
+      [,1]              [,2]      [,3]  [,4]
+1 40.75493      0.00007990727       0    0
+
+Salida 3,6 modelo de 3 capas ocultas y  4 nodos de primera entrada los 4 nodos de salida (4,4,4) entrada normalizada .26°C
+
+# weights:  28
+initial  value 7.286714 
+iter  10 value 0.033970
+iter  20 value 0.033274
+iter  30 value 0.033219
+iter  40 value 0.031253
+iter  50 value 0.027544
+iter  60 value 0.015938
+iter  70 value 0.002456
+iter  80 value 0.001202
+iter  90 value 0.000746
+iter 100 value 0.000571
+final  value 0.000571 
+stopped after 100 iterations
+
+reescalando:
+
+       [,1]   [,2] [,3] [,4]
+1  39.78953    0    0    0
+
+Salida 3,6 modelo de 3 capas ocultas y  5 nodos de primera entrada los 5 nodos de salida (5,5,5) entrada normalizada .26°C
+
+# weights:  40
+initial  value 7.660633 
+iter  10 value 0.034951
+iter  20 value 0.033145
+iter  30 value 0.032735
+iter  40 value 0.031824
+iter  50 value 0.010450
+iter  60 value 0.000562
+iter  70 value 0.000462
+iter  80 value 0.000458
+iter  90 value 0.000457
+iter 100 value 0.000452
+final  value 0.000452 
+stopped after 100 iterations
+
+      [,1]  [,2] [,3] [,4] [,5]
+1 40.40419    0    0    0    0
+
+Salida 3,7 modelo de 3 capas ocultas y  5 nodos de primera entrada los 5 nodos de salida (5,5,5) entrada normalizada .26°C
+
+# weights:  40
+initial  value 8.312340 
+iter  10 value 0.034633
+iter  20 value 0.033158
+iter  30 value 0.033141
+iter  40 value 0.032625
+iter  50 value 0.030853
+iter  60 value 0.028337
+iter  70 value 0.015533
+iter  80 value 0.010293
+iter  90 value 0.000570
+iter 100 value 0.000551
+final  value 0.000551 
+stopped after 100 iterations
+
+reescalando: 
+
+      [,1]         [,2]          [,3]        [,4] [,5]
+1 40.40112    0.1111018   0.00008039347 0.1759802    0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
