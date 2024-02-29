@@ -3,7 +3,7 @@
 ## Tabla ##
 
 La siguiente tabla consigna los valores para la variable calor desarrollados por ***Climatizacion55NN.R***, aqui se muestran los valores relevantes por cada tipo de red, 
-capas y nodos; luego tenga en cuenta que los valores de peso son de caracter aleatorio y no es recomendable dejarlos fijos para este tipo de prácticas (la entrada es 26°C o .26 normalizada asi como se hace en el codigo con el dataframe y no .csv). 
+capas y nodos; luego tenga en cuenta que los valores de peso son de caracter aleatorio y no es recomendable dejarlos fijos para este tipo de prácticas (la entrada es 26°C o .26 normalizada, tal y como se plantea en el codigo con el dataframe y no el archivo.csv). 
 
 **Recomendaciones**
 
@@ -30,3 +30,61 @@ capas y nodos; luego tenga en cuenta que los valores de peso son de caracter ale
 | 3 capas | 4 Nodos | 26 | 39.78 |
 | 3 capas | 5 Nodos | 26 | 40.40 |
 | 3 capas | 5 Nodos | 26 | 40.40 |
+
+**Notas** 
+
+- Recuerde que al obtener estos datos, se tiende a calcular una media para aproximar el valor "real", no obstante este hecho asume que los errores son simetricos y se "cancelan" entre si lo cual puede no ser cierto
+- Luego esto no quiere decir que no pueda restringir el valor real a un rango, para utilizarlos como base a otros posibles enfoques y tecnicas para mejorar el rendimiento de su controlador
+- Más que comparar capas o cantidad de nodos es conocer la naturaleza de los datos. Entender la naturaleza de los datos es fundamental para cualquier tipo de modelado. Esto incluye entender la distribución de los datos, las relaciones entre las variables, y cualquier posible sesgo o anomalía.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+English 
+
+## Air conditioning results ##
+
+## Table ##
+
+The following table shows the values for the heat variable developed by ***Climatizacion55NNN.R***, here are the relevant values for each type of network, layers and nodes; then note that the weight values are of random character and it is not recommended to leave them fixed for this type of practices (the input is 26°C or .26 normalized, as stated in the code with the dataframe and not the .csv file).
+
+**Recommendations**
+
+1. Extend the dataframe or generate it with other tools, take into account the processing and develop a filter of empty elements for each iteration.
+2. Compare the results obtained with this and other approaches developed in the main directory, to make your own conjectures.
+3. These data were obtained with the Rcommander tool, keep this in mind when you want to perform a migration of the alternative.
+4. Remember that as the result is a "prediction" it is subject to uncertainty, therefore establishing a range or comparison between approaches will allow you, among other things, to determine which is the most appropriate value to develop your controller...
+
+| N. of layers | N. de Nodes | Temperature to predict °C | Temperature predicted °C |
+| --- | --- | --- | --- | 
+| 2 layers | 2 Nodes | 26 | 40.18 |
+| 2 layers | 2 Nodes | 26 | 40.06 |
+| 2 layers | 3 Nodes | 26 | 39.54 |
+| 2 layers | 3 Nodes | 26 | 39.11 |
+| 2 layers | 4 Nodes | 26 | 39.96 |
+| 2 layers | 4 Nodes | 26 | 40.34 |
+| 2 layers | 5 Nodes | 26 | 40.39 |
+| 2 layers | 5 Nodes | 26 | 39.66 |
+| 3 layers | 2 Nodes | 26 | 39.71 |
+| 3 layers | 2 Nodes | 26 | 39.86 |
+| 3 layers | 3 Nodes | 26 | 40.71 |
+| 3 layers | 3 Nodes | 26 | 39.28 |
+| 3 layers | 4 Nodes | 26 | 40.75 |
+| 3 layers | 4 Nodes | 26 | 39.78 |
+| 3 layers | 5 Nodes | 26 | 40.40 |
+| 3 layers | 5 Nodes | 26 | 40.40 |
+
+**Notes**. 
+
+- Remember that when you get this data, you tend to calculate an average to approximate the "real" value, however this assumes that the errors are symmetrical and "cancel" each other which may not be true.
+- So this does not mean that you cannot restrict the true value to a range, to use as a basis for other possible approaches and techniques to improve the performance of your controller.
+- More than comparing layers or number of nodes is knowing the nature of the data. Understanding the nature of the data is fundamental to any type of modeling. This includes understanding the distribution of the data, the relationships between variables, and any possible biases or anomalies.
+
+
+
+
+
+
+
+
+
+
