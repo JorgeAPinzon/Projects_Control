@@ -51,5 +51,19 @@ se encuentren al menos los siguientes
 
 Proceda a abrir el archivo utilizando el menu abrir << archivo de instruccciones y ejecute por lineas (tal y como sucede en Rstudio)
 
+## Sugerencias ##
+
+- Si desea subir el dataframe sugerido (Datos_temperatura_climatizacion no normalizados), puede realizarlo desde el menu Datos >> importar datos; o si por el contrario desea crear su propio archivo .csv, recuerde que hay diversas plataformas en Excel por ejemplo puede crear tablas de datos e importarlas con el conjunto separación correspondiente (comas, puntos, espacios...)
+- En caso de no disponer de una idea de como distribuir, o la cantidad de datos a utilizar puede cargar paquetes, y desde alli importar los dataframes disponibles (preinstalados, MASS por ejemplo) y asi explorar la herramienta mas a fondo!!
+- En ocasiones e incluso en las mismas iteraciones los calculos iran a infinito o la herramienta "se saldra" esporadicamente, corregir los datos que generen vacios en
+la red o asignar mas cupo para la ejecucion del aplicativo puede ayudar a que sea menos frecuente
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+English 
+
+
+
+
 
 
