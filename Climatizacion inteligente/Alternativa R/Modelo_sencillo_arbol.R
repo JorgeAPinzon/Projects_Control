@@ -1,6 +1,6 @@
 
 Dataset <- 
-  read.table("/home/antiXLinux/Documentos/Sistemas de Control Enfoque /scripts y programas/Climatizacion inteligente/Alternativa R/Datos_temperatura_climatizacion.csv",
+  read.table("su ruta de descarga/Projects_Control/Climatizacion inteligente/Alternativa R/Datos_temperatura_climatizacion.csv",
    header=TRUE, sep=",", na.strings="NA", dec=".", strip.white=TRUE)
 
 library(rpart, pos=15)
