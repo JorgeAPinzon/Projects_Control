@@ -9,7 +9,7 @@ with(Dataset, stem.leaf(calor, na.rm=TRUE))
 
 scatterplot(calor~temperatura, regLine=FALSE, smooth=FALSE, boxplots=FALSE, data=Dataset)
 Dataset <- 
-  read.table("/home/antiXLinux/Documentos/Sistemas de Control Enfoque /scripts y programas/Climatizacion inteligente/Alternativa R/Datos_temperatura_climatizacion.csv",
+  read.table("/su ruta de descarga/Projects_Control/Climatizacion inteligente/Alternativa R/Datos_temperatura_climatizacion.csv",
    header=TRUE, sep=",", na.strings="NA", dec=".", strip.white=TRUE)
 
 # Realizar el agrupamiento k-means
@@ -32,17 +32,10 @@ hc <- hclust(d = distances_kmeans, method = "ward.D2")
 # Vector de pertenencia a clusters vistos por consola primero OJO 
 clusters <- c(1, 1, 1, 2, 2, 2)
 
-# Gráfico negro y rojo para la pertenencia de los cluster es decir: 
-# Cluster means: Son los centros de los clusters. En tu caso, el primer cluster tiene un promedio de temperatura de 27 y un promedio de calor de 35. 
-# El segundo cluster tiene un promedio de temperatura de 30 y un promedio de calor de 21.67.
-# Clustering vector: Indica a qué cluster pertenece cada observación. En tu caso, las primeras tres observaciones pertenecen al primer cluster y las últimas tres al segundo cluster.
-# Within cluster sum of squares by cluster: Es la suma de las distancias al cuadrado de cada punto a su centroide. Cuanto menor sea este valor, más “compacto” es el cluster.
-#(between_SS / total_SS = 79.9 %): Esta es una medida de cuánta variación se explica por los clusters. En tu caso, el 79.9% de la variación en tus datos se explica por la pertenencia
-#a los clusters.
 
 plot(Dataset$temperatura, Dataset$calor, col = clusters)
 
-# Regmodel.3 cargado con Estadisticos<ajuste de modelos < regresion lineal exp calor expli temperatura
+# Regmodel.3 cargado con Estadisticos<ajuste de modelos < regresion lineal variable a explicar 'calor', variable explicativa 'temperatura'
 
 RegModel.2 <- lm(calor~temperatura, data=Dataset)
 summary(RegModel.2)
