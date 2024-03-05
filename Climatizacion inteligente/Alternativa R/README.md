@@ -10,17 +10,17 @@ Esta alternativa explora R-Rcommander donde **Climatizacion55NN.R** genera los r
 los datos normalizados de entrada (**Datos_temperatura_climatizacion.csv**), muestra como varia el "calor" en funcion de una temperatura dada, mostrandolo en un grafico 
 junto con la predicción en la iteración correspondiente (deseada ver Resultados/Tabla_de_resultados.md)
 
-Por su parte el archivo **Modelo_sencillo_arbol.R** donde a diferencia de la red neuronal no se necesitan normalizar los datos, se carga el dataframe propuesto en el directorio(n = 6 observaciones). Sin embargo revela resultados desalentadores incialmente, pero a manera conceptual mas interesantes debido a la capacidad de segmentar y clasificar los datos incluso con una predicción no muy buena. Entre las alternativas solución se encuentran:
+Por su parte el archivo **Modelo_sencillo_arbol.R** que a diferencia de la red neuronal no se necesitan normalizar los datos, se "carga" el dataframe propuesto en el directorio (n = 6 observaciones). Sin embargo revela resultados desalentadores incialmente, pero a manera conceptual interesantes, debido a la capacidad de segmentar y clasificar los datos incluso con una predicción no muy buena. Entre las alternativas solución se encuentran:
 
 1. Verificar el conjunto de datos en busqueda de lecturas erroneas, espacios por iteración entre otros
-2. Revisar y limpiar el historico de datos o cualquier referente al preprocesamiento (si hubo)
+2. Revisar y limpiar el historico de datos o cualquier referente al preprocesamiento (si lo hubo)
 3. Analizar y recomprender el modelo del arbol
 4. El conjunto de datos es tan pequeño que no presenta una variabilidad significativa
 5. Intentar mejorar el modelo del arbol, por ejemplo ajustando los parametros de crecimiento del arbol; intentar diferentes enfoques de modelo o considerando otros tipos de modelos estadisticos que puedan ser mas adecuados para este conjunto de datos
 
-Luego es importante tener en cuenta que el analisis y la interpretación de los modelos pueden ser complejos, y requieren varias iteraciones es precisamente la prueba que se realiza en **Modelo_sencillo_arbolexp** se aumentan la cantidad de datos con el fin de obtener resultados mas precisos y utiles.
+Luego es importante tener en cuenta que el analisis y la interpretación de los modelos pueden ser complejos, y requieren varias iteraciones; es precisamente la prueba que se realiza en **Modelo_sencillo_arbolexp** aumentando la cantidad de datos con el fin de obtener resultados mas precisos y utiles.
 
-Por ultimo utilizando el archivo **Guia R clustering Climatizacion**, se creo el archivo de instrucciones **Clustering_climatizacion.R** con un dataframe auxiliar, para ejecutar el vector predicciones, se cargo el archivo .csv (en este directorio), y se realizo el agrupamiento en base al guardado de los centros y calculo de distancias. Despues se obtiene el vector pertenencia, se representa graficamente en conjunto con las predicciones. Este ultimo se obtuvo utilizando el asistente grafico de la herramienta para regresion lineal (ver en el directorio de Resultados).
+Por ultimo utilizando el archivo **Guia R clustering Climatizacion**, se creo conjunto de instrucciones **Clustering_climatizacion.R** con un dataframe auxiliar, para realizar el vector predicciones, una vez importado el archivo .csv (en este directorio) es realizado el agrupamiento en base a los centros y calculo de distancias. Despues con el vector pertenencia es posible graficar e imprimir en la consola el vector predicciones. Este ultimo se obtuvo utilizando el asistente grafico de la herramienta para regresion lineal (ver en el directorio de Resultados).
 
 ## Requerimientos y plataforma de desarrollo ##
 
@@ -92,6 +92,18 @@ English
 Refrigeration technologies are generally divided into air conditioning and refrigeration applications. Air conditioning technologies are defined as those used to maintain acceptable thermal comfort conditions for people and equipment in residential, commercial and industrial buildings and spaces. , typically in an environment that is between 20° and 30°.
 
 This alternative explores R-Rcommander where **Climatizacion55NN.R** generates the results (folder in the directory), creating a neural network and a prediction based on the normalized input data (**Datos_temperatura_climatizacion.csv**), shows how the "heat" varies as a function of a given temperature, showing it in a graph along with the prediction in the corresponding iteration (desired, see Results/Tabla_de_resultados.md)
+
+For its part, the file **Modelo_simple_arbol.R**, which, unlike the neural network, does not need to normalize the data, the proposed dataframe is "loaded" into the directory (n = 6 observations). However, it reveals initially discouraging results, but conceptually interesting, due to the ability to segment and classify the data even with a not very good prediction. Among the alternative solutions are:
+
+1. Check the data set for erroneous readings, gaps per iteration, among others.
+2. Review and clean the data history or any reference to preprocessing (if any)
+3. Analyze and reunderstand the tree model
+4. The data set is so small that it does not have significant variability
+5. Try to improve the tree model, for example by adjusting the tree's growth parameters; trying different modeling approaches or considering other types of statistical models that may be more suitable for this data set
+
+Then it is important to keep in mind that the analysis and interpretation of the models can be complex, and require several iterations; It is precisely the test that is carried out in **Modelo_simple_arbolexp** increasing the amount of data in order to obtain more precise and useful results.
+
+Finally, using the file **Guia R clustering Climatizacion**, a set of instructions **Clustering_climatizacion.R** was created with an auxiliary dataframe, to make the vector predictions, once the .csv file was imported (in this directory) it is grouping was carried out based on the centers and calculation of distances. Afterwards, with the membership vector it is possible to graph and print the prediction vector in the console. The latter was obtained using the graphical assistant of the linear regression tool (see the Results directory).
 
 ## Requirements and development platform ##
 
