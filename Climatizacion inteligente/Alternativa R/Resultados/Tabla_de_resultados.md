@@ -62,7 +62,38 @@ ___Conclusión___
 
 El comportamiento parece inesperado y no esta ajustado correctamente a los cambios de temperatura. El hecho de que la predicción de calor siga siendo 28.33. Indica qeu el modelo de arbol puede no estar funcionando correctamente o puede estar careciendo de adecuada capacidad pra predecir la variable "calor" en funcion de la variable "temperatura" 
 
-Producto de esta carencia, se extendio el conjunto de datos a utilizar en **Modelo_sencillo_arbolexp.R** 
+Producto de esta carencia, se extendio el conjunto de datos a utilizar en **Modelo_sencillo_arbolexp.R** donde las salidas mas relevantes son: 
+```
+n= 31 
+
+node), split, n, deviance, yval
+      * denotes terminal node
+
+1) root 31 1209.6770 26.45161  
+  2) temperatura>=28.5 18  100.0000 21.66667 *
+  3) temperatura< 28.5 13  126.9231 33.07692 *
+
+> prediccion <- predict(modelo_arbol, newdata = data.frame(temperatura = 26))
+
+> print(prediccion)
+       1 
+33.07692
+```
+- Ahora bien aqui el numero de observaciones es 31, la desviacion es de 1209.6770 y un valor promedio de la variable "calor" de 26.45161. 
+
+- La linea 2) temperatura>=28.5 18  100.0000 21.66667 * , siendo un nodo terminal indica que para las observaciones donde "temperatura" es mayor o igual a 28.5 hay 18 observaciones una desviacion de 100.000 y un valor promedio de "calor" de 21.66667
+
+- La linea 3 3) temperatura< 28.5 13  126.9231 33.07692 * este nodo terminal indica que para las observaciones donde "temperatura" es menor a 28.5 hay 13 observaciones una desviación de 126.9231 y un valor promedio de "calor" de 33.07692
+
+___Conclusión___
+
+En cuanto a la precisión de las predicciones es cierto que a medida que se tienen mas datos y mas variabilidad presenten, las prediciones seran mas precisas. Esto se debe a que el modelo tiene mas información para aprender de los datos; sin embargo depende tambien del modelo y de la variabilidad de los datos. Por lo tanto siempre es importante evaluar la precision de tus predicciones utilizando tecnicas de validación cruzadas o conjuntos de prueba separados.
+
+Ademas de clasificar o "filtrar" los datos otras posibles aplicaciones serian: 
+
+1. Identificacion de umbrales criticos: Los arboles de decision identifican umbrales en las variables de entrada que resultan en cambios significativos en la variable de la salida.(28.5°C para 31 observaciones)
+2. Analisis de sensibilidad: Se puede utlizar el modelo para entender como cambia la predicción del calor en respuesta de cambios de temperatura. Asi entendiendo dicha relación se pueden realizar ajustes (tenga en cuenta que esto se da en terminos del comportamiento del modelo, no de los datos)
+3. Por ultimo estan las medidas para reducir el calor definido mas como una de las estrategias de aplicacion no de modo
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
