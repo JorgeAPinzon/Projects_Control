@@ -10,6 +10,18 @@ Esta alternativa explora R-Rcommander donde **Climatizacion55NN.R** genera los r
 los datos normalizados de entrada (**Datos_temperatura_climatizacion.csv**), muestra como varia el "calor" en funcion de una temperatura dada, mostrandolo en un grafico 
 junto con la predicción en la iteración correspondiente (deseada ver Resultados/Tabla_de_resultados.md)
 
+Por su parte el archivo **Modelo_sencillo_arbol.R** donde a diferencia de la red neuronal no se necesitan normalizar los datos, se carga el dataframe propuesto en el directorio(n = 6 observaciones). Sin embargo revela resultados desalentadores incialmente, pero a manera conceptual mas interesantes debido a la capacidad de segmentar y clasificar los datos incluso con una predicción no muy buena. Entre las alternativas solución se encuentran:
+
+1. Verificar el conjunto de datos en busqueda de lecturas erroneas, espacios por iteración entre otros
+2. Revisar y limpiar el historico de datos o cualquier referente al preprocesamiento (si hubo)
+3. Analizar y recomprender el modelo del arbol
+4. El conjunto de datos es tan pequeño que no presenta una variabilidad significativa
+5. Intentar mejorar el modelo del arbol, por ejemplo ajustando los parametros de crecimiento del arbol; intentar diferentes enfoques de modelo o considerando otros tipos de modelos estadisticos que puedan ser mas adecuados para este conjunto de datos
+
+Luego es importante tener en cuenta que el analisis y la interpretación de los modelos pueden ser complejos, y requieren varias iteraciones es precisamente la prueba que se realiza en **Modelo_sencillo_arbolexp** se aumentan la cantidad de datos con el fin de obtener resultados mas precisos y utiles.
+
+Por ultimo utilizando el archivo **Guia R clustering Climatizacion**, se creo el archivo de instrucciones **Clustering_climatizacion.R** con un dataframe auxiliar, para ejecutar el vector predicciones, se cargo el archivo .csv (en este directorio), y se realizo el agrupamiento en base al guardado de los centros y calculo de distancias. Despues se obtiene el vector pertenencia, se representa graficamente en conjunto con las predicciones. Este ultimo se obtuvo utilizando el asistente grafico de la herramienta para regresion lineal (ver en el directorio de Resultados).
+
 ## Requerimientos y plataforma de desarrollo ##
 
 Probado y desarrollado en Linux (Debian)
