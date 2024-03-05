@@ -2,8 +2,7 @@
 
 ## Tabla ##
 
-La siguiente tabla consigna los valores para la variable calor desarrollados por ***Climatizacion55NN.R***, aqui se muestran los valores relevantes por cada tipo de red, 
-capas y nodos; luego tenga en cuenta que los valores de peso son de caracter aleatorio y no es recomendable dejarlos fijos para este tipo de prácticas (la entrada es 26°C o .26 normalizada, tal y como se plantea en el codigo con el dataframe y no el archivo.csv). 
+La siguiente tabla consigna los valores para la variable calor desarrollados por ***Climatizacion55NN.R***, aqui se muestran los valores relevantes por cada tipo de red, capas y nodos; luego tenga en cuenta que los valores de peso son de caracter aleatorio y no es recomendable dejarlos fijos para este tipo de prácticas (la entrada es 26°C o .26 normalizada, tal y como se plantea en el codigo con el dataframe y no el archivo.csv). 
 
 **Recomendaciones**
 
@@ -36,6 +35,34 @@ capas y nodos; luego tenga en cuenta que los valores de peso son de caracter ale
 - Recuerde que al obtener estos datos, se tiende a calcular una media para aproximar el valor "real", no obstante este hecho asume que los errores son simetricos y se "cancelan" entre si lo cual puede no ser cierto
 - Luego esto no quiere decir que no pueda restringir el valor real a un rango, para utilizarlos como base a otros posibles enfoques y tecnicas para mejorar el rendimiento de su controlador
 - Más que comparar capas o cantidad de nodos es conocer la naturaleza de los datos. Entender la naturaleza de los datos es fundamental para cualquier tipo de modelado. Esto incluye entender la distribución de los datos, las relaciones entre las variables, y cualquier posible sesgo o anomalía.
+
+## Consola R Commander ##
+
+El siguiente es un modelo sencilo de arbol desarrollado en R, se obtuvo con el archivo de instrucciones **Modelo_sencillo_arbol.R** y sus salidas representativas son 
+
+```
+n= 6 
+
+node), split, n, deviance, yval
+      * denotes terminal node
+
+1) root 6 333.3333 28.33333 *
+```
+```
+> print(prediccion)
+[1] 28.33333
+```
+Esta salida en R Commander significa que ha realizado un analisis de arboles de decision (DT) con 6 observaciones n = 6. El arbol tiene un nodo raiz y un nodo terminal marcado con un asterisco (*) lo que indica que es un nodo terminal o hoja
+
+El primer nodo, el nodo raiz tiene 6 casos (n = 6) y una desviación cuadratica (deviance) de 333.3333 y un valor de validación (yval). Para este caso el hecho de que tenga un solo nodo terminal significa que no se ha dividido mas alla de este. Esto podria sugerrir que el modelo de arbol no ha logrado encontar suficiente variabilidad o diferencias significativas en los datos para crear mas nodos.
+
+El segundo nodo, el nodo terminal, tambien tiene 6 casos (n = 6) y una desviación cuadratica de 28.333 esto significa que el nodo terminal es mas preciso que el nodo raiz ya que la desviación cuadratica es menor
+
+___Conclusión___
+
+El comportamiento parece inesperado y no esta ajustado correctamente a los cambios de temperatura. El hecho de que la predicción de calor siga siendo 28.33. Indica qeu el modelo de arbol puede no estar funcionando correctamente o puede estar careciendo de adecuada capacidad pra predecir la variable "calor" en funcion de la variable "temperatura" 
+
+Producto de esta carencia, se extendio el conjunto de datos a utilizar en **Modelo_sencillo_arbolexp.R** 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
