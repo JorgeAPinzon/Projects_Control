@@ -95,6 +95,76 @@ Ademas de clasificar o "filtrar" los datos otras posibles aplicaciones serian:
 2. Analisis de sensibilidad: Se puede utlizar el modelo para entender como cambia la predicción del calor en respuesta de cambios de temperatura. Asi entendiendo dicha relación se pueden realizar ajustes (tenga en cuenta que esto se da en terminos del comportamiento del modelo, no de los datos)
 3. Por ultimo estan las medidas para reducir el calor definido mas como una de las estrategias de aplicacion no de modo
 
+Por ultimo esta incluido el conjunto de instrucciones llamado **Clustering_climatizacion.R** obtenido con **Guia R clustering Climatizacion**, que hace referencia al agrupamiento de datos de entrada, y la declaración de un vector predicción, son obtenidas metricas para determinar la referencia al cluster por cada dato de entrada-salida importado (importante cargarlo desde el menu importar datos .csv o dataframe), con este vector de pertenencia es posible obtener el grafico_sencillo_clustering (direcctorio resultados) e imprimir en consola los datos predichos con respecto a nuevos_datos <- data.frame(temperatura = c(26, 27, 28, 29, 30, 31)); regresion lineal solo como una referente. Luego los datos mas relevantes de este desarrollo se pueden ver a continuación:
+```
+> with(Dataset, stem.leaf(calor, na.rm=TRUE))
+1 | 2: represents 12
+ leaf unit: 1
+            n: 6
+   2    2* | 00
+  (1)   2. | 5
+  (1)   3* | 0
+   2    3. | 5
+   1    4* | 0
+```
+leaf unit : hace referencia a que la unidad de hojas es 1
+n = 6 : numero de observaciones 
+ 2    2* | 00 : Esto representa el numero 20 en los datos por ejemplo y la primera cifra hace alusion a la frecuencia 
+
+```
+ > print(kmeans_resultado)
+K-means clustering with 2 clusters of sizes 3, 3
+
+Cluster means:
+  temperatura    calor
+1          27 35.00000
+2          30 21.66667
+
+Clustering vector:
+[1] 1 1 1 2 2 2
+
+Within cluster sum of squares by cluster:
+[1] 52.00000 18.66667
+ (between_SS / total_SS =  79.9 %)
+
+Available components:
+
+[1] "cluster"      "centers"      "totss"        "withinss"     "tot.withinss" "betweenss"    "size"         "iter"         "ifault"
+```
+Gráfico con puntos negro y rojo para la pertenencia de los cluster es decir: 
+Cluster means: Son los centros de los clusters. En este caso, el primer cluster tiene un promedio de temperatura de 27 y un promedio de calor de 35. El segundo cluster tiene un promedio de temperatura de 30 y un promedio de calor de 21.67.
+Clustering vector: Indica a qué cluster pertenece cada observación. Para este caso las primeras tres observaciones pertenecen al primer cluster y las últimas tres al segundo cluster.
+Within cluster sum of squares by cluster: Es la suma de las distancias al cuadrado de cada punto a su centroide. Cuanto menor sea este valor, más “compacto” es el cluster.
+(between_SS / total_SS = 79.9 %): Esta es una medida de cuánta variación se explica por los clusters. Entonces el 79.9% de la variación en los datos se explica por la pertenencia a los clusters.
+
+El modelo 3 se compone internamiente:
+```
+Call:
+lm(formula = calor ~ temperatura, data = Dataset)
+
+Residuals:
+      1       2       3       4       5       6 
+ 0.9524  0.2381 -0.4762 -1.1905 -1.9048  2.3810 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 150.4762    11.7743   12.78 0.000216 ***
+temperatura  -4.2857     0.4124  -10.39 0.000484 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.725 on 4 degrees of freedom
+Multiple R-squared:  0.9643,	Adjusted R-squared:  0.9554 
+F-statistic:   108 on 1 and 4 DF,  p-value: 0.0004841
+```
+Y el vector predicciones es:
+```
+> print(predicciones)
+       1        2        3        4        5        6 
+39.04762 34.76190 30.47619 26.19048 21.90476 17.61905
+```
+
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 English 
