@@ -236,7 +236,7 @@ The second node, the terminal node, also has 6 cases (n = 6) and a quadratic dev
 
 ___Conclusion___
 
-behavior seems unexpected and is not adjusted correctly to temperature changes. The fact that the heat prediction is still 28.33. Indicates that the tree model may not be working correctly or may be lacking adequate capacity to predict the variable "heat" as a function of the variable "temperature"
+behavior seems unexpected and is not adjusted correctly to temperature changes. The fact that the heat prediction is still 28.33. Indicates that the tree model may not be working correctly or may be lacking adequate capacity to predict the variable "calor" as a function of the variable "temperatura"
 
 As a result of this lack, the data set to be used in **Modelo_sencillo_arbolexp.R** was extended where the most relevant outputs are:
 
