@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.3">
+  <object class="tk.Toplevel" id="toplevel1">
+    <property name="height">200</property>
+    <property name="width">200</property>
+    <child>
+      <object class="ttk.Frame" id="frame1">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">0</property>
+        </layout>
+        <child>
+          <object class="ttk.Label" id="label1">
+            <property name="background">#ffffff</property>
+            <property name="borderwidth">0</property>
+            <property name="image">fondo_modos_op.png</property>
+            <property name="text" translatable="yes">label1</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label2">
+            <property name="background">#149bd8</property>
+            <property name="font">{SF Pro Display} 10 {bold}</property>
+            <property name="foreground">#f0f3f8</property>
+            <property name="text" translatable="yes">Hora:</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">43</property>
+              <property name="pady">130</property>
+              <property name="row">0</property>
+              <property name="sticky">nw</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label3">
+            <property name="background">#149bd8</property>
+            <property name="font">{SF Pro Display} 10 {bold}</property>
+            <property name="foreground">#f0f3f8</property>
+            <property name="text" translatable="yes">Fecha:</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">43</property>
+              <property name="pady">155</property>
+              <property name="row">0</property>
+              <property name="sticky">nw</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label4">
+            <property name="background">#001321</property>
+            <property name="font">{SF Pro Display} 24 {}</property>
+            <property name="foreground">#e6e6eb</property>
+            <property name="text" translatable="yes">22</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="pady">210</property>
+              <property name="row">0</property>
+              <property name="sticky">n</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label5">
+            <property name="background">#14a6ff</property>
+            <property name="font">{SF Pro Display} 12 {bold}</property>
+            <property name="foreground">#f0f3f8</property>
+            <property name="text" translatable="yes">Regresión lineal:</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">86</property>
+              <property name="pady">270</property>
+              <property name="row">0</property>
+              <property name="sticky">nw</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Radiobutton" id="radiobutton1">
+            <property name="style">Radio_estilo_1.TRadiobutton</property>
+            <property name="text" translatable="yes">Modo manual</property>
+            <property name="value">manual</property>
+            <property name="variable">string:var</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">86</property>
+              <property name="pady">60</property>
+              <property name="row">0</property>
+              <property name="sticky">sw</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Radiobutton" id="radiobutton3">
+            <property name="style">Radio_estilo_1.TRadiobutton</property>
+            <property name="text" translatable="yes">Modo semiautomático</property>
+            <property name="value">semiautomatico</property>
+            <property name="variable">string:var</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">260</property>
+              <property name="pady">60</property>
+              <property name="row">0</property>
+              <property name="sticky">sw</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Radiobutton" id="radiobutton4">
+            <property name="style">Radio_estilo_1.TRadiobutton</property>
+            <property name="text" translatable="yes">Modo automático</property>
+            <property name="value">automatico</property>
+            <property name="variable">string:var</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">475</property>
+              <property name="pady">60</property>
+              <property name="row">0</property>
+              <property name="sticky">sw</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button2">
+            <property name="command" type="command" cbtype="simple">presion_boton_off</property>
+            <property name="image">iconooff_rojo.png</property>
+            <property name="style">boton_off.TButton</property>
+            <property name="text" translatable="yes">button2</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">52</property>
+              <property name="pady">62</property>
+              <property name="row">0</property>
+              <property name="sticky">nw</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button3">
+            <property name="command" type="command" cbtype="simple">boton_grafico</property>
+            <property name="style">boton_evento.TButton</property>
+            <property name="text" translatable="yes">Gráfico</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">140</property>
+              <property name="pady">51</property>
+              <property name="row">0</property>
+              <property name="sticky">ne</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button4">
+            <property name="style">boton_evento.TButton</property>
+            <property name="text" translatable="yes">Notificaciones</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">140</property>
+              <property name="pady">90</property>
+              <property name="row">0</property>
+              <property name="sticky">ne</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label6">
+            <property name="background">#6bc0e4</property>
+            <property name="font">{SF Pro Display} 9 {}</property>
+            <property name="foreground">#ffffff</property>
+            <property name="text" translatable="yes">1</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">92</property>
+              <property name="pady">88</property>
+              <property name="row">0</property>
+              <property name="sticky">ne</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Text" id="text1">
+            <property name="background">#14a6d3</property>
+            <property name="borderwidth">0</property>
+            <property name="font">{SF Pro Display} 11 {}</property>
+            <property name="foreground">#ffffff</property>
+            <property name="height">10</property>
+            <property name="highlightbackground">#14a6d3</property>
+            <property name="highlightcolor">#e6e6e6</property>
+            <property name="highlightthickness">2</property>
+            <property name="insertbackground">#e6e6e6</property>
+            <property name="text" translatable="yes">Area de notificaciones</property>
+            <property name="width">40</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">20</property>
+              <property name="pady">2</property>
+              <property name="row">0</property>
+              <property name="sticky">se</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="pygubu.builder.widgets.calendarframe" id="calendarframe1">
+            <property name="borderwidth">0</property>
+            <property name="calendarbg">#f9f6f8</property>
+            <property name="calendarfg">#000623</property>
+            <property name="firstweekday">6</property>
+            <property name="headerbg">#14a6e0</property>
+            <property name="headerfg">#f1f1f1</property>
+            <property name="linewidth">1</property>
+            <property name="selectbg">#14a6e0</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">220</property>
+              <property name="pady">15</property>
+              <property name="row">0</property>
+              <property name="sticky">nw</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Entry" id="entry1">
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">265</property>
+              <property name="pady">180</property>
+              <property name="row">0</property>
+              <property name="sticky">nw</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button1">
+            <property name="command" type="command" cbtype="simple">programar</property>
+            <property name="image">iconoprogramar.png</property>
+            <property name="style">boton_off.TButton</property>
+            <property name="text" translatable="yes">button1</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">384</property>
+              <property name="pady">178</property>
+              <property name="row">0</property>
+              <property name="sticky">nw</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
